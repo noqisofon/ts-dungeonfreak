@@ -1,0 +1,13 @@
+{
+  "name": "dungeonfreak",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "ned rihine",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "tape": "^4.9.1"
+  }
+}

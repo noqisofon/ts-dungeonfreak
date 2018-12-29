@@ -1,0 +1,12 @@
+# -*- mode: gitignore; coding: utf-8; -*-
+
+# Emacs temporary files
+*~
+\#*#
+
+# log files
+*.log
+logs/
+
+# NPM packages directry
+node_modules/
