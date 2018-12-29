@@ -5,9 +5,9 @@ namespace dungeon {
 
 
     export interface Cell {
-        isOpen          : bool;
-        isLeftWallOpen  : bool;
-        isTopWallOpen   : bool;
+        isOpen          : boolean;
+        isLeftWallOpen  : boolean;
+        isTopWallOpen   : boolean;
     }
     
     /*!
@@ -108,13 +108,13 @@ namespace dungeon {
          *
          */
         draw(tiles : Array2D) : void {
-            this.drawMap( pos => tiles.[pos].type = TitleType.Floor );
+            this.drawMap( pos => tiles[pos].type = TitleType.Floor );
         }
 
         /*!
          *
          */
-        drawMap(carve_opening : Vector2D -> void) : void {
+        drawMap(carve_opening : (pos : Vector2D) => void) : void {
             for ( let y of range( 0, this.bounds.height ) ) {
                 for ( let x of range( 0, this.bounds.width ) ) {
                     let position = new Vector2D( x, y );
@@ -143,7 +143,7 @@ namespace dungeon {
         /*!
          *
          */
-        private isOpen(position : Vector2D) : bool {
+        private isOpen(position : Vector2D) : boolean {
             if ( !this.bounds.contains( position ) ) {
                 ThrowHelper.argumentOutOfRange( 'position' );
             }
@@ -154,7 +154,7 @@ namespace dungeon {
         /*!
          *
          */
-        private canCarve(position : Vector2D, a_direction : Direction) : bool {
+        private canCarve(position : Vector2D, a_direction : Direction) : boolean {
             if ( !this.bounds.contains( position ) ) {
 
                 return false;

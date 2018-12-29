@@ -6,7 +6,12 @@
 
 # log files
 *.log
+
+# log file directory
 logs/
 
 # NPM packages directry
 node_modules/
+
+# TypeScript transpile target directory
+out/
